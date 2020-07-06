@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Questions platform</title>
+    <link href="/css/styles.css" style="text/css" rel="stylesheet" />
   </head>
   <body>
     <h1>
@@ -15,7 +16,7 @@
     </h3>
 
     <% if(msg){ %>
-    <h3>Error message!</h3>
+    <h1>Error message!</h1>
     <% }else{ %>
     <h3>No error</h3>
     <%}%>
@@ -24,7 +25,7 @@
       <li>
         <%= product.name %>
       </li>
-      <% }) %>
+      <% })%>
     </ul>
   </body>
 </html>
