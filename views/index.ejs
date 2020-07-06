@@ -13,5 +13,18 @@
     <h3>
       <%= lang %>
     </h3>
+
+    <% if(msg){ %>
+    <h3>Error message!</h3>
+    <% }else{ %>
+    <h3>No error</h3>
+    <%}%>
+    <ul>
+      <% products.forEach(product => { %>
+      <li>
+        <%= product.name %>
+      </li>
+      <% }) %>
+    </ul>
   </body>
 </html>
