@@ -1,11 +1,15 @@
 import express from "express";
 import path from "path";
+import bodyParser from "body-parser";
 
 const app = express();
 
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "..", "public")));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
   res.render("index");
@@ -16,7 +20,9 @@ app.get("/questions", (req, res) => {
 });
 
 app.post("/save-questions", (req, res) => {
-  res.send("Form received!");
+  const { title, description } = req.body;
+
+  res.send(`${title}`);
 });
 
 app.listen(3333, () => console.log("Server running on http://localhost:3333"));
