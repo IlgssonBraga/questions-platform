@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import bodyParser from "body-parser";
 import connection from "./config/database";
+import Question from "./app/models/Question";
 
 const app = express();
 
