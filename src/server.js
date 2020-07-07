@@ -15,4 +15,8 @@ app.get("/questions", (req, res) => {
   res.render("question");
 });
 
+app.post("/save-questions", (req, res) => {
+  res.send("Form received!");
+});
+
 app.listen(3333, () => console.log("Server running on http://localhost:3333"));
