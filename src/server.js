@@ -1,8 +1,14 @@
 import express from "express";
 import path from "path";
 import bodyParser from "body-parser";
+import connection from "./config/database";
 
 const app = express();
+
+connection
+  .authenticate()
+  .then(() => console.log("Success"))
+  .catch((e) => console.log(e));
 
 app.set("view engine", "ejs");
 
