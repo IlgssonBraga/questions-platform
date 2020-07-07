@@ -1,7 +1,7 @@
 import Sequelize from "sequelize";
 import connection from "../../config/database";
 
-const Question = connection.define("question", {
+const Question = connection.define("questions", {
   title: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -13,3 +13,5 @@ const Question = connection.define("question", {
 });
 
 Question.sync({ force: false }).then(() => {});
+
+export default Question;

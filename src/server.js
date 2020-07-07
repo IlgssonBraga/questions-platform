@@ -28,8 +28,9 @@ app.get("/questions", (req, res) => {
 
 app.post("/save-questions", (req, res) => {
   const { title, description } = req.body;
-
-  res.send(`${title}`);
+  Question.create({ title, description }).then(() => {
+    res.redirect("/");
+  });
 });
 
 app.listen(3333, () => console.log("Server running on http://localhost:3333"));
