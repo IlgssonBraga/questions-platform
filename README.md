@@ -10,7 +10,7 @@
 # :page_with_curl: About
 
 This project is a small full stack application using the Node.js renderer for
-static files. Users can add questions, read and answer questions.
+static files. Users can add, read and answer questions.
 
 # :wrench: Technologies used
 
