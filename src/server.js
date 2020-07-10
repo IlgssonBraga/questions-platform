@@ -38,9 +38,15 @@ app.post("/save-questions", (req, res) => {
 
 app.get("/questions/:id", (req, res) => {
   const id = req.params.id;
+
   Question.findOne({ where: { id } }).then((question) => {
     if (question) {
-      res.render("singleQuestion.ejs", { question });
+      Answer.findAll({
+        where: { questionId: question.id },
+        order: [["id", "DESC"]],
+      }).then((answers) => {
+        res.render("singleQuestion.ejs", { question, answers });
+      });
     } else {
       res.redirect("/");
     }
