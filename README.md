@@ -1,7 +1,7 @@
 # Questions platform using Node.js with EJS
 
 <p align="center">
-  <img src="https://www.kindpng.com/picc/m/338-3389065_redis-logo-svg-hd-png-download.png" alt="redis-caching" width="500"/>
+  <img src="https://smallville.com.au/wp-content/uploads/2019/08/21-great-questions-for-facilitators-Part-2.jpg" alt="redis-caching" width="500"/>
 </p>
 
 [![NPM Version](https://img.shields.io/npm/v/npm.svg?style=flat)](https://www.npmjs.com/)
