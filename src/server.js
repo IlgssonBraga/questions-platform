@@ -3,6 +3,7 @@ import path from "path";
 import bodyParser from "body-parser";
 import connection from "./config/database";
 import Question from "./app/models/Question";
+import Answer from "./app/models/Answer";
 
 const app = express();
 
