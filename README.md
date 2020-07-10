@@ -1,7 +1,7 @@
 # Questions platform using Node.js with EJS
 
 <p align="center">
-  <img src="https://smallville.com.au/wp-content/uploads/2019/08/21-great-questions-for-facilitators-Part-2.jpg" alt="redis-caching" width="500"/>
+  <img src="https://smallville.com.au/wp-content/uploads/2019/08/21-great-questions-for-facilitators-Part-2.jpg" alt="questions-platform" width="500"/>
 </p>
 
 [![NPM Version](https://img.shields.io/npm/v/npm.svg?style=flat)](https://www.npmjs.com/)
