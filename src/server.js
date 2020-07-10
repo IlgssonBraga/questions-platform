@@ -47,4 +47,11 @@ app.get("/questions/:id", (req, res) => {
   });
 });
 
+app.post("/answers", (req, res) => {
+  const { answer, body } = req.body;
+  Answer.create({ questionId: answer, body }).then(() => {
+    res.redirect(`/questions/${answer}`);
+  });
+});
+
 app.listen(3333, () => console.log("Server running on http://localhost:3333"));
