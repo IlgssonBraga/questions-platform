@@ -35,4 +35,15 @@ app.post("/save-questions", (req, res) => {
   });
 });
 
+app.get("/questions/:id", (req, res) => {
+  const id = req.params.id;
+  Question.findOne({ where: { id } }).then((question) => {
+    if (question) {
+      res.render("singleQuestion.ejs", { question });
+    } else {
+      res.redirect("/");
+    }
+  });
+});
+
 app.listen(3333, () => console.log("Server running on http://localhost:3333"));
